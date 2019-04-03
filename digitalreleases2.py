@@ -50,6 +50,8 @@ KINOZAL_SEARCH_BDRIP = "http://kinozal.tv/browse.php?s=%5E{}&g=3&c=0&v=3&d=0&w=0
 KINOZAL_USERNAME = ""
 KINOZAL_PASSWORD = ""
 
+PROJECT_URL = "https://github.com/Kyrie1965/torrentReleases"
+
 def main():
 	print("Дата и время запуска программы: " + str(datetime.datetime.now()) + ".")
 	print("Количество попыток при ошибках соединения: " + str(CONNECTION_ATTEMPTS) + ".")
@@ -1789,6 +1791,7 @@ function sortTorrentsDate(){
 		#html += movieTemplate.format(movie["torrentsDate"].strftime("%Y-%m-%d"), movie["torrentsDate"].strftime("%Y-%m-%d"), movie["rating"], movie["torrentsDate"].strftime("%Y-%m-%d"), movie["nameRU"], displayOrigName, movie["nameOriginal"], ratingStyle, rating, movie["posterURL"], movie["nameRU"], movie["trailerURL"], descriptionBlock, movie["description"], buttonsBlock)
 	html += """    </div>
   </div>
+  <div style="text-align: center; margin: 20px 0;"><a href="""+PROJECT_URL+""" target="_blank" style="font-size:10px; color:black">GitHub</a></div>
 </body>
 </html>"""
 	f.write(html)
